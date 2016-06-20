@@ -1,0 +1,16 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Add location</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+<p th:text="'Add new location'"/>
+<!--/*@thymesVar id="location" type="ru.volkov.bootsample.entity.Location"*/-->
+<form action="#" th:action="@{/location}" th:object="${location}" method="post">
+    <input type="text" th:field="*{name}" title="name"/>
+    <input type="text" th:field="*{description}" title="desc"/>
+    <input type="submit"/>
+</form>
+</body>
+</html>
